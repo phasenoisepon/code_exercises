@@ -24,7 +24,7 @@ class Test(TestCase):
         Check that a repeated number passes
         :return:
         """
-        list1 = [5, 5,1, 2]
+        list1 = [5, 5, 1, 2]
         search1 = 10
         self.assertTrue(ArraySumming.sum_two_target(list1, search1))
 
@@ -48,6 +48,6 @@ class Test(TestCase):
         Check that a repeated number passes
         :return:
         """
-        list1 = [5, 5,1, 2]
+        list1 = [5, 5, 1, 2]
         search1 = 10
         self.assertTrue(ArraySumming.sum_two_target_naive(list1, search1))
