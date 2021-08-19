@@ -2,16 +2,21 @@ from unittest import TestCase
 from missing_number import MissingNumbers
 from random import shuffle
 
+
 class TestMissingNumbers(TestCase):
-    def test_sum_1_n(self):
+    def test_sum_1_constant_1(self):
         self.assertEqual(MissingNumbers.sum_1_n(1), 1)
+
+    def test_sum_1_constant_2(self):
         self.assertEqual(MissingNumbers.sum_1_n(2), 3)
+
+    def test_sum_1_constant_3(self):
         self.assertEqual(MissingNumbers.sum_1_n(3), 6)
 
+    def test_sum_1_constant_large_n(self):
         n = 100
         # reminder that range is [start, stop)
         self.assertEqual(MissingNumbers.sum_1_n(n), sum(range(1, n + 1, 1)))
-        # self.fail()
 
     def test_find_missing(self):
         test_list = [1, 2, 3, 4, 5]
