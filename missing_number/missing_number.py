@@ -5,8 +5,8 @@ You are given an array of positive numbers from 1 to n, such that all numbers fr
  number ‘x’. You have to find ‘x’. The input array is not sorted.
 """
 
-class MissingNumbers:
 
+class MissingNumbers:
 
     @staticmethod
     def sum_1_n(n: int) -> int:
