@@ -13,12 +13,14 @@ class ArraySumming:
     @staticmethod
     def sum_two_target(given: list, search: int)->bool:
         # determine if there are any two = return early when a single match is found
-        # algorithm: add values to a set, then check while searching given list if target - current exists in set
-        my_set = set(given)
+        # algorithm: check if [search - element] exists in the set, then add current value to set
+        # avoids comparing to self
+        my_set = set()
         for element in given:
             if search - element in my_set:
-                return True
-        return False
+                return True # early return
+            my_set.add(element)
+        return False # no elements were matched
 
     @staticmethod
     def sum_two_target_naive(given: list, search: int)->bool:
