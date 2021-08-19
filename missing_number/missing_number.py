@@ -5,6 +5,7 @@ You are given an array of positive numbers from 1 to n, such that all numbers fr
  number ‘x’. You have to find ‘x’. The input array is not sorted.
 """
 
+
 class MissingNumbers:
 
     @staticmethod
@@ -25,16 +26,17 @@ class MissingNumbers:
         assert len(diff) == 1
         return diff.pop()
 
+
 if __name__ == "__main__":
     length = random.randint(2, 20)
     my_list = list(range(1, length))
-    n = length - 1
+    my_n = length - 1
 
     random.shuffle(my_list)
     my_list.pop()  # pop the last
 
-    print("List is {length} long and is from 1 to {n}".format(length=len(my_list), n=n))
+    print("List is {length} long and is from 1 to {n}".format(length=len(my_list), n=my_n))
     print(my_list)
-    print("Missing number is {}".format(MissingNumbers.find_missing(my_list, n)))
+    print("Missing number is {}".format(MissingNumbers.find_missing(my_list, my_n)))
     # python solution
-    print("Set diff is {}".format(MissingNumbers.find_missing_set(my_list, n)))
+    print("Set diff is {}".format(MissingNumbers.find_missing_set(my_list, my_n)))
