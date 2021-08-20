@@ -21,17 +21,26 @@ class SingleLinkedList(object):
         assert self.head is None
         if len(input_list) < 1:
             return
-        if len(input_list) == 1:
-            self.head = Node(input_list[0])
-            return
-
-        current = self.head
         for item in input_list:
-            if self.head is None:
-                self.head = Node(item)
-            else:
-                current.next = Node(item)
+            self.insert_at_end(item)
+
+    def insert_at_beginning(self, data):
+        tmp = Node(data)
+        if self.head is None:
+            self.head = tmp
+        else:
+            tmp.next = self.head
+            self.head = tmp
+
+    def insert_at_end(self, data):
+        tmp = Node(data)
+        if self.head is None:
+            self.head = tmp
+        else:
+            current = self.head
+            while current.next is not None:
                 current = current.next
+            current.next = tmp
 
 
 def merge_sorted(list1: SingleLinkedList, list2: SingleLinkedList) -> SingleLinkedList:
