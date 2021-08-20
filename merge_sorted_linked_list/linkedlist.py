@@ -16,9 +16,8 @@ class SingleLinkedList(object):
 
     def __init__(self):
         self.head = None
-    pass
 
-    def create_from_list(self, input_list: list):
+    def create_from_list(self, input_list: list) -> None:
         assert self.head is None
         if len(input_list) < 1:
             return
@@ -40,5 +39,9 @@ def merge_sorted(list1: SingleLinkedList, list2: SingleLinkedList) -> SingleLink
     return SingleLinkedList()
 
 
-if __name__ == "__main__":
+def main():
     pass
+
+
+if __name__ == "__main__":
+    main()
